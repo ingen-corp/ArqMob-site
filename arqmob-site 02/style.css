@@ -1,0 +1,395 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #0c1f2e;
+  background-color: #f7f0ea;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* BARRA DO LOGO E MENU */
+header {
+  background-color: #031d2e;
+  color: #f7f0ea;
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 60px; /* altura fixa para calcular offset */
+}
+
+/* Container do header para alinhar logo e nav lado a lado */
+header > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  color: #f7f0ea;
+  font-weight: bold;
+  margin: 0;
+}
+
+nav {
+  /* Mantido vazio para não interferir no flex do container */
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  color: #f7f0ea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.menu li a:hover {
+  color: #edebdf;
+}
+
+/* Botão de menu sempre visível */
+.menu-toggle {
+  display: block; /* sempre visível */
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #f7f0ea;
+  cursor: pointer;
+}
+
+/* Menu escondido por padrão */
+.menu {
+  display: none; /* esconde sempre */
+  flex-direction: column; /* vertical */
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu visível quando ativado */
+.menu.show {
+  display: flex;
+}
+
+/* Opcional: ajuste o nav para largura e fundo */
+nav {
+  position: relative;
+}
+
+/* Estilização extra para o menu quando aberto */
+.menu.show {
+  position: absolute;
+  top: 60px; /* ajusta para ficar abaixo do header */
+  right: 10px;
+  background-color: #031d2e;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1001;
+}
+
+/* Links do menu */
+.menu li a {
+  color: #f7f0ea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #edebdf;
+}
+
+/* IMAGEM NATURAL */
+.hero {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(3, 29, 46, 0.6)),
+              url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #f7f0ea;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  margin-bottom: 2rem;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  margin-top: 0;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #f7f0ea;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  max-width: 600px; /* largura máxima para alinhar texto */
+}
+
+.btn {
+  background-color: #945022;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 3px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+  max-width: fit-content; /* botão com largura justa ao texto */
+}
+
+.versiculo-container {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  padding: 0 13rem;
+  white-space: nowrap;  /* Evita quebra de linha */
+  overflow: hidden;
+}
+
+.versiculo {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #edebdf;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+.btn:hover {
+  background-color: #773a0d;
+}
+
+/* SEÇÕES */
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #1d4b73;
+  border-bottom: 2px solid #773a0d;
+  padding-bottom: 0.3rem;
+}
+
+.about p, .services p {
+  font-size: 1.1rem;
+}
+
+/* SERVIÇOS */
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.service-item {
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  flex: 1 1 300px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-left: 5px solid #965525;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.service-item h3 {
+  margin-bottom: 0.5rem;
+  color: #773a0d;
+}
+
+/* GALERIA DE SERVIÇOS */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item p {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  color: #0c2132;
+}
+
+/* DEPOIMENTOS */
+.comentarios {
+  padding: 80px 40px;
+  background-color: #edebdf;
+  text-align: center;
+}
+
+.comentarios h2 {
+  font-size: 2.5rem;
+  color: #031d2e;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.comentarios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.comentario-item {
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  font-style: italic;
+}
+
+.comentario-item span {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #773a0d;
+}
+
+/* CONTATO */
+form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 550px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: #0c2132;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  resize: vertical;
+  font-size: 1rem;
+}
+
+#formMessage {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: green;
+}
+
+/* RODA PÉ */
+footer {
+  background-color: #0c2132;
+  color: #edebdf;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media(max-width: 768px){
+  header > .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  nav {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .menu {
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .service-list {
+    flex-direction: column;
+  }
+
+  .logo-container {
+    justify-content: center;
+  }
+}
+
+/* Ajuste para scroll considerando header sticky */
+html {
+  scroll-padding-top: 60px; /* altura do header */
+}

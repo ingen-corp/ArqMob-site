@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ArqMob - Soluções em Design de Interiores</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+ <!-- BARRA DO LOGO E MENU -->
+  <header>
+  <div class="container">
+    <div class="logo-container">
+      <img src="imagens/logo.png" alt="Logo ArqMob" class="logo-img" />
+      <h1 class="logo-text">ArqMob  -  (Empresa Fictícia)</h1>
+    </div>
+    
+    <nav>
+    <button class="menu-toggle">☰</button>
+<ul class="menu">
+
+  <li><a href="#sobre">Sobre</a></li>
+  <li><a href="#servicos">Serviços</a></li>
+  <li><a href="#galeria">Galeria</a></li>
+  <li><a href="#contato">Contato</a></li>
+  <li><a href="#comentarios">Depoimentos</a></li>
+  
+</ul>
+    </nav>
+  </div>
+</header>
+<!-- TOPO EM CIMA DA IMAGEM -->
+<section class="hero">
+  <div class="container">
+    <h2>Transformando espaços em sonhos</h2>
+    <p>Soluções em Design de Interiores com personalidade e inovação</p>
+    <a href="#contato" class="btn">Solicite um Orçamento</a>   
+     
+    
+    <div class="versiculo-container">
+      <p class="versiculo">
+        “Com sabedoria se constrói a casa, e com discernimento se estabelece.
+        Pelo conhecimento os cômodos se enchem de toda sorte de bens preciosos
+        e agradáveis.” — Provérbios 24:3
+      </p>
+    </div>
+  </div>
+</section>
+
+  <!-- SOBRE -->
+<section id="sobre" class="about container">
+  <h2>Sobre a ArqMob</h2>
+  <p>Na Arqmob, acreditamos que o lar é onde o coração se sente em paz. Nossa missão é 
+    criar espaços que sejam não apenas funcionais, mas também acolhedores e cheios de amor.
+    Queremos que você e sua família se sintam confortáveis e felizes em cada canto da sua 
+    casa. Vamos juntos criar momentos inesquecíveis e transformar seu lar em um refúgio 
+    perfeito!</p>
+</section>
+<br>
+<br>
+
+ <!-- SERVIÇOS -->
+<section id="servicos" class="services container">
+  <h2>Serviços</h2>
+  <div class="service-list">
+    <article class="service-item">
+      <h3>Consultoria de Design</h3>
+      <p>Planejamento e orientação para projetos residenciais e comerciais.</p>
+    </article>
+    <article class="service-item">
+      <h3>Projeto Personalizado</h3>
+      <p>Desenvolvimento de projeto completo com foco em estética e funcionalidade.</p>
+    </article>
+    <article class="service-item">
+      <h3>Execução e Montagem</h3>
+      <p>Coordenação e acompanhamento da montagem do projeto finalizado.</p>
+    </article>
+  </div>
+</section>
+<br>
+<br>
+
+  <!-- GALERIA DE SERVIÇOS -->
+<section id="galeria" class="gallery container">
+    <h2>Galeria de Fotos</h2>
+    <div class="gallery-grid">
+  <div class="gallery-item">
+    <img src="imagens/img1.jpg" alt="Serviço 1" />
+    <p>Consultoria personalizada para espaços residenciais</p>
+  </div>
+  <div class="gallery-item">
+    <img src="imagens/img2.jpg" alt="Serviço 2" />
+    <p>Projetos de interiores modernos e funcionais</p>
+  </div>
+  <div class="gallery-item">
+    <img src="imagens/img3.jpg" alt="Serviço 3" />
+    <p>Execução detalhada e montagem profissional</p>
+  </div>
+  <div class="gallery-item">
+    <img src="imagens/img4.png" alt="Serviço 4" />
+    <p>Soluções em design também para clínicas e consultórios, com foco em bem-estar e funcionalidade.</p>
+  </div>
+  <div class="gallery-item">
+    <img src="imagens/img5.jpg" alt="Serviço 5" />
+    <p>Detalhes que transformam espaços comuns em experiências únicas.</p>
+  </div>
+  <div class="gallery-item">
+    <img src="imagens/img6.jpg" alt="Serviço 6" />
+    <p>Ambientes planejados para refletir sua personalidade com elegância e conforto.</p>
+  </div>
+</div>
+  </section>
+
+    </div>
+  </div>
+</section>
+<br>
+<br>
+
+<!-- CONTATO -->
+<section id="contato" class="contact container">
+  <h2>Contato</h2>
+  <form id="contactForm">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+    <button type="submit" class="btn">Enviar</button>
+  </form>
+  <div id="formMessage"></div>
+</section>
+<br>
+<br>
+
+<!-- DEPOIMENTOS -->
+<section id="comentarios" class="comentarios">
+  <h2>O que nossos clientes dizem:</h2>
+  <div class="comentarios-grid">
+    <div class="comentario-item">
+      <p>A ArqMob transformou completamente minha sala. Atendimento excelente e projeto maravilhoso!</p>
+      <span>— Fernanda Lima</span>
+    </div>
+    <div class="comentario-item">
+      <p>Profissionais atenciosos e criativos. Super recomendo!</p>
+      <span>— Roberto Santos</span>
+    </div>
+    <div class="comentario-item">
+      <p>Amei o resultado! Tudo feito com muito cuidado e carinho.</p>
+      <span>— Juliana Almeida</span>
+    </div>
+    <div class="comentario-item">
+      <p>"Fiquei impressionado com a atenção aos detalhes. A equipe entendeu exatamente o que eu queria e entregou um projeto impecável."</p>
+      <span>— Marcos Oliveira</span>
+    </div>
+    <div class="comentario-item">
+      <p>"Desde o primeiro contato até a finalização da montagem, tudo foi feito com muita dedicação. Nota 10 para a ArqMob!"</p>
+      <span>— Ana Beatriz Nunes</span>
+    </div>
+  </div>
+</section>
+<!-- TEXTO RODA PÉ -->
+<footer>
+  <div class="container">
+    <p>© 2025 ArqMob Soluções em Design de Interiores LTDA - Rua das Acácias, 582 – Estância Pinhais – CEP: 83323-540</p>
+    <p>Telefone: (41) 3254-7788 | Email: arqmob.design@gmail.com</p>
+  </div>
+</footer>
+</body>
+</html>
