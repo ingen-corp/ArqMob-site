@@ -189,7 +189,7 @@ nav {
   transform: translateX(-50%);
   width: 100%;
   text-align: center;
-  padding: 0 13rem;
+  padding: 0 1.5rem;
   white-space: nowrap;  /* Evita quebra de linha */
   overflow: hidden;
 }
@@ -396,6 +396,7 @@ html {
 
 /* Estilos adicionais para responsividade */
 @media (max-width: 768px) {
+  /* Container principal do header */
   header .container {
     flex-direction: column;
     align-items: center;
@@ -405,30 +406,49 @@ html {
   .logo-container {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 10px;
   }
 
   .logo-text {
-    font-size: 1.2rem;
-    margin-top: 10px;
+    font-size: 1.1rem;
+    margin-top: 8px;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    margin: 10px auto;
   }
 
   nav .menu {
+    display: none;
     flex-direction: column;
     gap: 10px;
-    align-items: center;
+    margin-top: 10px;
   }
 
+  nav .menu.show {
+    display: flex;
+  }
+
+  /* Hero Section */
   .hero .container {
-    padding: 20px;
+    flex-direction: column;
+    padding: 30px 20px;
     text-align: center;
   }
 
   .hero h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
   }
 
   .hero p {
     font-size: 1rem;
+    margin-bottom: 15px;
   }
 
   .versiculo-container {
@@ -436,20 +456,14 @@ html {
   }
 
   .versiculo {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     padding: 0 10px;
   }
 
-  .menu-toggle {
-    display: block;
-    margin-top: 10px;
-  }
-
-  nav .menu {
-    display: none;
-  }
-
-  nav.active .menu {
-    display: flex;
+  .btn {
+    margin-top: 15px;
+    font-size: 1rem;
+    padding: 10px 15px;
+    display: inline-block;
   }
 }
