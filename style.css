@@ -393,3 +393,54 @@ footer {
 html {
   scroll-padding-top: 60px; /* altura do header */
 }
+@media(max-width: 768px) {
+  /* Ajusta o header */
+  header > .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
+  }
+
+  .menu.show {
+    position: static;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 10px 0;
+  }
+
+  .menu li a {
+    font-size: 1rem;
+  }
+
+  .versiculo-container {
+    padding: 0 1rem;
+    white-space: normal;
+    font-size: 0.9rem;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .btn {
+    margin: 0 auto;
+  }
+}
