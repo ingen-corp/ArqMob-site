@@ -30,7 +30,7 @@ header {
 }
 
 /* Container do header para alinhar logo e nav lado a lado */
-header > .container {
+header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -189,7 +189,7 @@ nav {
   transform: translateX(-50%);
   width: 100%;
   text-align: center;
-  padding: 0 1.5rem;
+  padding: 0 13rem;
   white-space: nowrap;  /* Evita quebra de linha */
   overflow: hidden;
 }
@@ -394,76 +394,85 @@ html {
   scroll-padding-top: 60px; /* altura do header */
 }
 
-/* Estilos adicionais para responsividade */
 @media (max-width: 768px) {
-  /* Container principal do header */
+  header {
+    background-color: #031d2e;
+    color: #f7f0ea;
+    padding: auto;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    height: 3rem;
+  }
+
   header .container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    display: flex;
+    align-items: center;         /* alinha verticalmente */
+    justify-content: flex-start; /* tudo alinhado à esquerda */
+    flex-wrap: nowrap;           /* nunca quebra linha */
+    overflow: hidden;            /* evita transbordar */
+    gap: 20px;
   }
 
   .logo-container {
-    flex-direction: column;
+    display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    gap: 6px;
+    min-width: 0;                /* permite encolher */
+    flex: 1;                     /* ocupa o espaço disponível */
+  }
+
+  .logo-img {
+    height: 32px;                /* reduz logo */
+    width: auto;
+    flex-shrink: 0;               /* logo nunca some */
   }
 
   .logo-text {
-    font-size: 1.1rem;
-    margin-top: 8px;
+    font-size: 0.85rem;           /* diminui texto */
+    white-space: nowrap;          /* impede quebra */
+    overflow: hidden;             /* corta se ultrapassar */
+    text-overflow: ellipsis;      /* coloca "..." se cortar */
   }
 
-  .menu-toggle {
-    display: block;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: white;
-    margin: 10px auto;
-  }
-
-  nav .menu {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  nav .menu.show {
+  nav {
     display: flex;
+    align-items: center;
+    flex-shrink: 0;               /* nunca encolhe */
   }
 
-  /* Hero Section */
-  .hero .container {
-    flex-direction: column;
-    padding: 30px 20px;
-    text-align: center;
+  /* Esconde o menu normal */
+  ul.menu {
+    display: none;
   }
 
-  .hero h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
+  /* Mostra apenas o botão */
+  .menu-toggle {
+    display: none;
   }
 
-  .hero p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
-
-  .versiculo-container {
-    margin-top: 20px;
-  }
-
-  .versiculo {
-    font-size: 0.95rem;
-    padding: 0 10px;
-  }
-
-  .btn {
-    margin-top: 15px;
-    font-size: 1rem;
-    padding: 10px 15px;
-    display: inline-block;
-  }
+  header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: auto;
+  max-width: 1100px;
+  margin: 0 auto;
 }
+
+.versiculo-container {
+  display: none
+  bottom: -6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;       /* centraliza o texto */
+  padding: 0 0.5rem;
+  overflow: hidden;
+}
+
+.versiculo {
+  display: none;
+
+}
+  }
