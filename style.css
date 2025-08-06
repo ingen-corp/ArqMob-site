@@ -462,17 +462,25 @@ html {
 
 .versiculo-container {
   display: none
-  bottom: -6rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  text-align: center;       /* centraliza o texto */
-  padding: 0 0.5rem;
-  overflow: hidden;
 }
 
 .versiculo {
   display: none;
 
 }
+@media (max-width: 768px) {
+  .service-list {
+    gap: 1rem; /* reduz o espaçamento para ficar mais compacto */
   }
+
+  .service-item {
+    flex: 1 1 100%;      /* ocupa toda a largura disponível no mobile */
+    padding: 0.75rem 1rem; /* padding menor */
+    border-left-width: 3px; /* borda mais fina */
+  }
+
+  .service-item h3 {
+    font-size: 1.1rem;   /* reduz um pouco o tamanho do título */
+    margin-bottom: 0.4rem;
+  }
+}
