@@ -185,11 +185,9 @@ nav {
 .versiculo-container {
   position: absolute;
   bottom: 0px;
-  left: 50%;
+  left: 49rem;
   transform: translateX(-50%);
   width: 100%;
-  text-align: center;
-  padding: 0 13rem;
   white-space: nowrap;  /* Evita quebra de linha */
   overflow: hidden;
 }
